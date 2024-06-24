@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply py-6;
+}
+nav {
+  filter: saturate(0.7) !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply !text-white !text-base !font-bold;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  @apply bg-primary-100 rounded-full h-10 w-10 flex items-center justify-center;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  @apply bg-primary-100;
+}
