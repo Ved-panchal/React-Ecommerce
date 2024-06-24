@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
+import Errorpage from "./pages/error"
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Product from "./pages/Product";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/product/:id" element={<Product />} />
           <Route path="/contact-us" element={<ContactForm />} />
           <Route path="/orderdetails" element={<Orderdetails />} />
+          <Route path = "*" element={<Errorpage/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
