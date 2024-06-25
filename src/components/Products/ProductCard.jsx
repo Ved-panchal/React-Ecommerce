@@ -8,7 +8,6 @@ import { getCookie } from '../Utils/getCookie';
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
-
   const userId = getCookie("userId");
 
   const handleAddToCart = (event) => {

@@ -1,5 +1,5 @@
 // src/services/redux/actions/authActions.js
-import { loginSuccess, loginFailure } from '../reducers/authReducers'; // Incorrect import
+import { loginSuccess, loginFailure } from '../reducers/authReducers'
 import config from '../../config';
 import { showToast } from '../../toasts/index'
 
@@ -24,11 +24,11 @@ export const loginUser = (credentials) => async (dispatch) => {
         document.cookie = `authToken=${authToken}; path=/`;
 
         dispatch(loginSuccess(data.userInfo));
-        showToast(data.msg, 'success'); // Assuming showToast is available in your setup
+        showToast(data.msg, 'success');
     } catch (error) {
         console.error('Fetch Error:', error);
         dispatch(loginFailure('Login failed. Please try again.'));
-        showToast('Login failed. Please try again.', 'error'); // Assuming showToast is available in your setup
+        showToast('Login failed. Please try again.', 'error');
     }
 };
 
